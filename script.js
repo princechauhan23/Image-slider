@@ -1,7 +1,10 @@
 const leftbtn = document.getElementById('left');
 const rightbtn = document.getElementById('right');
+const desc = document.getElementById('desc');
 var container = document.getElementById('container');
 var counter = 0;
+var arr = ["mountain", "beach", "city", "forest", "desert"];
+
 
 leftbtn.addEventListener('click', () => {
     counter--;
@@ -9,6 +12,7 @@ leftbtn.addEventListener('click', () => {
         counter = 4;
     }
     container.style.marginLeft = "-" + counter * 100 + '%';
+    desc.innerHTML = arr[counter];
 });
 
 rightbtn.addEventListener('click', () => {
@@ -17,4 +21,5 @@ rightbtn.addEventListener('click', () => {
         counter = 0;
     }
     container.style.marginLeft = '-' + counter * 100 + '%';
+    desc.innerHTML = arr[counter];
 });
