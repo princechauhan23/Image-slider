@@ -14,7 +14,7 @@ leftbtn.addEventListener('click', () => {
     container.style.marginLeft = "-" + counter * 100 + '%';
     desc.innerHTML = arr[counter];
 });
-
+//  right button
 rightbtn.addEventListener('click', () => {
     counter++;
     if (counter > 4) {
