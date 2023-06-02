@@ -23,3 +23,16 @@ rightbtn.addEventListener('click', () => {
     container.style.marginLeft = '-' + counter * 100 + '%';
     desc.innerHTML = arr[counter];
 });
+
+
+// automate the slider
+setInterval(() => {
+    counter++;
+    if (counter > 4) {
+        counter = 0;
+    }
+    container.style.marginLeft = '-' + counter * 100 + '%';
+    // add transition
+    container.style.transition = 'all 1s ease-in-out';
+    desc.innerHTML = arr[counter];
+}, 4000);
